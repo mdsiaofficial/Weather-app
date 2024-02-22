@@ -1,4 +1,4 @@
-2nd project: Weather App
+Project - 2: Weather App
 
 Overview:
 

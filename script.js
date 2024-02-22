@@ -1,19 +1,13 @@
 "use strict";
 
 
-const apiKey = "1dc02c2cda3d32eda98eede7405d0e42";
-const cityInput = document.getElementById("cityName").value;
-const cityInfo =`&q=${cityInput}&appid=${apiKey}`;
-// const city = `&q=dhaka&appid=${apiKey}`;
+
+
 const apiURL = "https://api.openweathermap.org/data/2.5/weather?units=metric";
 
-const searchBox = document.querySelector(".searchArea input");
-const searchBtn = document.querySelector(".searchArea button");
-
-console.log(city);
 
 async function checkWeather(city) {
-    const response = await fetch(apiURL + city);
+    const response = await fetch(apiURL + city + apiKey);
     var data = await response.json();
     console.log(data);
 
@@ -23,8 +17,4 @@ async function checkWeather(city) {
     document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
 };
-searchBtn.addEventListener("click", function(){
-
-    checkWeather(searchBox.value);
-});
 

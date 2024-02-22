@@ -3,12 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo-Organization</title>
+    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
     
+    <div class="AppCard">
+
+        <!-- input -->
+        <div class="searchArea">
+            <input type="text" placeholder="enter city name" spellcheck="false">
+            <!-- search button -->
+            <button><img src="img/search.png"></button>
+        </div>
+        
+        <!-- display -->
+        <div class="WeatherDisplay">
+    
+            <img src="img/rain.png" class="Weather-Icon">
+    
+            <h1 class="temperature">33°</h1>
+    
+            <h2>Dhaka</h2>
+            <div class="detailsInfo">
+                <div class="column">
+                    
+                    <img src="img/humidity.png">
+                    <div>
+                        <p class="humidity">15%</p>
+                        <p>Humidity</p>
+                    </div>
+
+                </div>
+
+                <div class="column">
+                    
+                    <img src="img/wind.png">
+                    <div>
+                        <p class="wind">30 km/h</p>
+                        <p>Humidity</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        
+
+
+    </div>
+
+
 
     <script src="script.js"></script>
 </body>

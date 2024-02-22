@@ -7,6 +7,12 @@ const searchField = document.querySelector(".searchArea input");
 const searchBtn = document.querySelector(".searchArea button");
 
 
+function city(){
+    const inputName = document.querySelector("#impTXT");
+    const city = `&q=${inputName.value}`;
+    checkWeather(city);
+}
+
 
 
 async function checkWeather(city) {
@@ -21,8 +27,15 @@ async function checkWeather(city) {
     
 };
 
-searchBtn.addEventListener("click", function(){
-    const city = `&q=${"dhaka"}`;
-    checkWeather(city);
+searchBtn.addEventListener("click", city); // addEventlistener e funcion call korle () lage na
+
+
+var input = document.getElementById("impTXT");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    // document.getElementById("myBtn").click();
+    city();
+  }
 });
 

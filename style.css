@@ -56,6 +56,12 @@ body{
 }
 
 
+.Weather-Icon{
+
+    width: 170px;
+    margin-top: 30px;
+}
+
 .searchArea button{
     border: 0;
     outline: 0;
@@ -70,3 +76,46 @@ body{
     padding-top: 5px;
 }
 
+.WeatherDisplay h1{
+    font-size: 80px;
+    font-weight: 500;
+}
+.WeatherDisplay h2{
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+
+
+.detailsInfo{
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+
+}
+
+.column{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.column img{
+    width: 50px;
+    margin-right: 10px;
+}
+
+.humidity, .wind{
+    font-size: larger;
+    margin-top: -5px;
+}
+
+/*
+
+https://api.openweathermap.org/data/2.5/weather?q=dhaka&appid=1dc02c2cda3d32eda98eede7405d0e42
+
+https://api.openweathermap.org/data/2.5/weather?q={dhaka}&appid={1dc02c2cda3d32eda98eede7405d0e42}
+*/

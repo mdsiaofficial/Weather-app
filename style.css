@@ -117,3 +117,19 @@ body{
 .WeatherDisplay{
     display: none;
 }
+
+.title{
+    margin-top: -30px;
+    margin-bottom: 15px;
+}
+
+.title p{
+    font-size: 18px;
+}
+
+.title p span{
+    color:#35282d;
+    font-weight: 800;
+}
+
+

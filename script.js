@@ -26,6 +26,9 @@ async function checkWeather(city) {
 	document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
 	document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
 
+/* 	
+
+	// code reformatted
 	if (data.weather[0].main == "Clouds") {
 		weatherIcon.src = "img/clouds.png";
 	}
@@ -48,7 +51,16 @@ async function checkWeather(city) {
 
 	if (data.weather[0].main == "Snow") {
 		weatherIcon.src = "img/snow.png";
-	}
+	} 
+	
+	
+	*/
+
+	let iconName = (data.weather[0].main).toLowerCase();
+	weatherIcon.src = `img/${iconName}.png`;
+	// console.log(iconName);
+	
+
 
 	document.querySelector(".WeatherDisplay").style.display = "block";
 };

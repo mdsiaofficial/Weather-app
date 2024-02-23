@@ -19,27 +19,38 @@ function city() {
 async function checkWeather(city) {
 	const response = await fetch(apiURL + appKey + city);
 	var data = await response.json();
-	// console.log(data);
+	console.log(data);
 
-	if(response.status == 404){
-		document.querySelector(".error").style.display = "block";
-		document.querySelector(".weather").style.display = "none";
-		
-		
-	}else{
-		document.querySelector(".city").innerHTML = data.name;
-		document.querySelector(".temperature").innerHTML = Math.round(data.main.temp) + "°C";
-		document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-		document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
-		let iconName = (data.weather[0].main).toLowerCase();
-		weatherIcon.src = `img/${iconName}.png`;
-		document.querySelector(".WeatherDisplay").style.display = "block";
-		document.querySelector(".error").style.display = "block";
+	document.querySelector(".city").innerHTML = data.name;
+	document.querySelector(".temperature").innerHTML = Math.round(data.main.temp) + "°C";
+	document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+	document.querySelector(".wind").innerHTML = data.wind.speed + "km/h";
+
+	if (data.weather[0].main == "Clouds") {
+		weatherIcon.src = "img/clouds.png";
 	}
 
+	if (data.weather[0].main == "Mist") {
+		weatherIcon.src = "img/Mist.png";
+	}
 
+	if (data.weather[0].main == "Rain") {
+		weatherIcon.src = "img/rain.png";
+	}
 
+	if (data.weather[0].main == "Drizzle") {
+		weatherIcon.src = "img/drizzle.png";
+	}
 
+	if (data.weather[0].main == "Clear") {
+		weatherIcon.src = "img/clear.png";
+	}
+
+	if (data.weather[0].main == "Snow") {
+		weatherIcon.src = "img/snow.png";
+	}
+
+	document.querySelector(".WeatherDisplay").style.display = "block";
 };
 
 searchBtn.addEventListener("click", city); // addEventlistener e funcion call korle () lage na

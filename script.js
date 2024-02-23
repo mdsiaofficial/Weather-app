@@ -14,6 +14,7 @@ function city() {
 	checkWeather(city);
 }
 
+// document.querySelector(".WeatherDisplay").style.display = "block";
 
 
 async function checkWeather(city) {
@@ -48,6 +49,10 @@ async function checkWeather(city) {
 
 	if (data.weather[0].main == "Snow") {
 		weatherIcon.src = "img/snow.png";
+	}
+
+	if (data.weather[0].main == "Haze") {
+		weatherIcon.src = "img/haze.png";
 	}
 
 	document.querySelector(".WeatherDisplay").style.display = "block";
